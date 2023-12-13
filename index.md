@@ -5,34 +5,29 @@ sidebar: false
 hero:
   name: unplugin
   text: Unified plugin system
-  tagline: Collection of Essential Vue Composition Utilities
+  tagline: Support Vite, Rollup, Webpack, esbuild, and more
   image:
-    src: /favicon.ico
+    src: /logo.svg
     alt: unplugin
   actions:
     - theme: brand
       text: Get Started
-      link: /guide/
+      link: /guide/getting-started
     - theme: alt
-      text: Functions
-      link: /functions
-    - theme: alt
-      text: Add-ons
-      link: /add-ons
+      text: Showcase
+      link: /Showcase
     - theme: alt
       text: View on GitHub
-      link: https://github.com/unplugin/unplugin
+      link: https://github.com/unjs/unplugin
 
 features:
-  - title: Feature Rich
-    details: 200+ functions for you to choose from
-    icon: 🎛
-  - title: Feature Rich
-    details: 200+ functions for you to choose from
-    icon: 🎛
-  - title: Feature Rich
-    details: 200+ functions for you to choose from
-    icon: 🎛
+  - title: Unified
+    details: Unified plugin system for build tools.
+    icon: ⚖️
+    
+  - title: Unified
+    details: Unified plugin system for build tools.
+    icon: ⚖️
 ---
 
 <Home />
