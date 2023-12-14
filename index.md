@@ -3,12 +3,12 @@ layout: home
 sidebar: false
 
 hero:
-  name: unplugin
+  name: Unplugin
   text: Unified plugin system
   tagline: Support Vite, Rollup, Webpack, esbuild, and more
   image:
     src: /logo.svg
-    alt: unplugin
+    alt: Unplugin
   actions:
     - theme: brand
       text: Get Started

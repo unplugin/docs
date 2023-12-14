@@ -21,20 +21,20 @@ export default defineConfig({
         text: 'Guide',
         items: [
           { text: 'Getting Started', link: '/guide/getting-started' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'Plugin Installation', link: '/guide/plugin-installation' }
         ]
       },
       {
-        text: 'Examples',
+        text: 'Usage',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'Hooks', link: '/usage/hooks' },
+          { text: 'Nested Plugins', link: '/usage/nested-plugins' }
         ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/unjs/unplugin' }
     ]
   }
 })
