@@ -1,6 +1,6 @@
 # Supported Context
 
-| Context                                                                       | Rollup | Vite | Webpack 4 | Webpack 5 | esbuild | Rspack |
+| Context                                                                       | Rollup | Vite | webpack 4 | webpack 5 | esbuild | Rspack |
 | -------------------------------------------------------------------------- | :----: | :--: | :-------: | :-------: | :-----: | :----: |
 | [`this.parse`](https://rollupjs.org/plugin-development/#this-parse)                   |   ✅   |  ✅  |    ✅     |    ✅     |   ✅    |   ✅   |
 | [`this.addWatchFile`](https://rollupjs.org/plugin-development/#this-addwatchfile)     |   ✅   |  ✅  |    ✅     |    ✅     |   ❌    |   ❌   |

@@ -26,7 +26,7 @@ export const unplugin = createUnplugin((options: UserOptions, meta) => {
       // Rollup plugin
     },
     webpack(compiler) {
-      // Configure Webpack compiler
+      // Configure webpack compiler
     },
     rspack(compiler) {
       // Configure Rspack compiler

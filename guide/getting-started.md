@@ -8,7 +8,7 @@
 
 - [Vite](https://vitejs.dev/)
 - [Rollup](https://rollupjs.org/)
-- [Webpack](https://webpack.js.org/)
+- [webpack](https://webpack.js.org/)
 - [esbuild](https://esbuild.github.io/)
 - [Rspack](https://www.rspack.dev/) <span style="color: #ca8a04"><strong>(⚠️ experimental)</strong></span>
 

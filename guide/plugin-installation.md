@@ -47,7 +47,7 @@ export default {
 }
 ```
 
-```js [Webpack]
+```js [webpack]
 // webpack.config.js
 module.exports = {
   /* ... */
@@ -67,7 +67,7 @@ module.exports = {
 }
 ```
 
-```js [Esbuild]
+```js [esbuild]
 // esbuild.config.js
 import { build } from 'esbuild'
 import Starter from 'unplugin-starter/esbuild'
@@ -77,7 +77,7 @@ build({
 })
 ```
 
-```js [Vue-Cli]
+```js [Vue-CLI]
 // vue.config.js
 module.exports = {
   configureWebpack: {

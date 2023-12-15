@@ -5,7 +5,7 @@ sidebar: false
 hero:
   name: Unplugin
   text: Unified plugin system
-  tagline: Support Vite, Rollup, Webpack, esbuild, and more
+  tagline: Support Vite, Rollup, webpack, esbuild, and more
   image:
     src: /logo.svg
     alt: Unplugin

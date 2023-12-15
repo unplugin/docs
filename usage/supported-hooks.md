@@ -1,6 +1,6 @@
 # Supported Hooks
 
-| Hook                                                                              |     Rollup      | Vite | Webpack 4 | Webpack 5 |     esbuild   | Rspack |
+| Hook                                                                              |     Rollup      | Vite | webpack 4 | webpack 5 |     esbuild   | Rspack |
 | ----------------------------------------------------------------------------------| :-------------: | :--: | :-------: | :-------: | :-----------: | :----: |
 | [`enforce`](https://vitejs.dev/guide/api-plugin.html#plugin-ordering)             | ❌ <sup>1</sup> |  ✅  |    ✅     |    ✅     | ❌ <sup>1</sup> |   ✅   |
 | [`buildStart`](https://rollupjs.org/plugin-development/#buildstart)               |       ✅        |  ✅  |    ✅     |    ✅     |       ✅        |   ✅   |
@@ -15,7 +15,7 @@
 
 ::: details Notice
 1. Rollup and esbuild do not support using `enforce` to control the order of plugins. Users need to maintain the order manually.
-2. Webpack's id filter is outside of loader logic; an additional hook is needed for better perf on Webpack. In Rollup and Vite, this hook has been polyfilled to match the behaviors. See for the following usage examples.
+2. webpack's id filter is outside of loader logic; an additional hook is needed for better perf on webpack. In Rollup and Vite, this hook has been polyfilled to match the behaviors. See for the following usage examples.
 3. Although esbuild can handle both JavaScript and CSS and many other file formats, you can only return JavaScript in `load` and `transform` results.
 4. Currently, `writeBundle` is only serves as a hook for the timing. It doesn't pass any arguments.
 :::

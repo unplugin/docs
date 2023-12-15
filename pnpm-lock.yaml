@@ -8,6 +8,9 @@ devDependencies:
   '@antfu/eslint-config':
     specifier: ^2.4.5
     version: 2.4.5(@vue/compiler-sfc@3.3.11)(eslint@8.55.0)(typescript@5.3.3)
+  case-police:
+    specifier: ^0.6.1
+    version: 0.6.1
   eslint:
     specifier: ^8.55.0
     version: 8.55.0
@@ -1323,6 +1326,11 @@ packages:
   /callsites@3.1.0:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
     engines: {node: '>=6'}
+    dev: true
+
+  /case-police@0.6.1:
+    resolution: {integrity: sha512-tOgkG3HhtzNVHU+HVHqbpVJ3CICPDihtlgoM2C4dx0RLeo6qcNVeBgiYJN5Bln+stxKrnKrw89CFgqYQDqwZQg==}
+    hasBin: true
     dev: true
 
   /ccount@2.0.1:
