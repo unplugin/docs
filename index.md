@@ -24,14 +24,8 @@ features:
   - title: Unified
     details: Unified plugin system for build tools.
     icon: ⚖️
-    
+
   - title: Unified
     details: Unified plugin system for build tools.
     icon: ⚖️
 ---
-
-<script setup>
-import Home from './.vitepress/components/Home.vue'
-</script>
-
-<Home />

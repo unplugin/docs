@@ -1,6 +1,6 @@
 # Nested Plugins
 
-Since `v0.10.0`, unplugin supports constructing multiple nested plugins to behave like a single one. 
+Since `v0.10.0`, unplugin supports constructing multiple nested plugins to behave like a single one.
 
 ## Bundler Supported
 |         Rollup         | Vite | Webpack 4 | Webpack 5 | Rspack |    esbuild     |

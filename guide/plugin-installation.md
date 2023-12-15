@@ -13,7 +13,7 @@ yarn add unplugin-starter -D
 ```
 
 ```bash [pnpm]
-pnpm add unplugin-starter -D 
+pnpm add unplugin-starter -D
 ```
 
 ```bash [bun]
@@ -36,7 +36,6 @@ export default defineConfig({
 })
 ```
 
-
 ```js [Rollup]
 // rollup.config.js
 import Starter from 'unplugin-starter/rollup'
@@ -47,7 +46,6 @@ export default {
   ],
 }
 ```
-
 
 ```js [Webpack]
 // webpack.config.js
@@ -68,7 +66,6 @@ module.exports = {
   ]
 }
 ```
-
 
 ```js [Esbuild]
 // esbuild.config.js
