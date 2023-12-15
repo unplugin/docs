@@ -7,8 +7,8 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Guide', link: '/guide/getting-started', activeMatch: '/guide/' },
+      { text: 'Showcase', link: '/showcase' }
     ],
     search: {
       provider: 'local'
@@ -27,9 +27,19 @@ export default defineConfig({
       {
         text: 'Usage',
         items: [
-          { text: 'Hooks', link: '/usage/hooks' },
-          { text: 'Nested Plugins', link: '/usage/nested-plugins' }
+          { text: 'Supported Hooks', link: '/usage/supported-hooks' },
+          { text: 'Supported Context', link: '/usage/supported-context' },
+          { text: 'Nested Plugins', link: '/usage/nested-plugins' },
+          { text: 'Bundler-Specific Logic', link: '/usage/bundler-specific-logic' }
         ]
+      },
+      {
+        text: 'Showcase',
+        link: '/showcase'
+      },
+      {
+        text: 'Conventions',
+        link: '/conventions'
       }
     ],
 

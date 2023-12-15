@@ -12,62 +12,15 @@
 - [esbuild](https://esbuild.github.io/)
 - [Rspack](https://www.rspack.dev/) <span style="color: #ca8a04"><strong>(⚠️ experimental)</strong></span>
 
-## Trying Unplugin Online
+## Trying It Online
 
-[![open](https://developer.stackblitz.com/img/open_in_codeflow.svg)](https://stackblitz.com/~/github.com/yuyinws/unplugin-starter?file=src/index.ts)
+You can try Unplugin in your browser directly.
 
-## Creating the first Unplugin package
+[![open](/open_in_codeflow.svg)](https://stackblitz.com/~/github.com/yuyinws/unplugin-starter?file=src/index.ts)
 
+## Creating an Unplugin package
 
-### [Starter template](https://github.com/unplugin/unplugin-starter)
 ```shell
 npx degit unplugin/unplugin-starter my-unplugin
 ```
-
-### Manual
-
-::: code-group
-
-```bash [npm]
-npm install unplugin
-```
-
-```bash [yarn]
-yarn add unplugin
-```
-
-```bash [pnpm]
-pnpm add unplugin
-```
-
-```bash [bun]
-bun add unplugin
-```
-
-:::
-
-```ts
-import { createUnplugin } from 'unplugin'
-
-export const unplugin = createUnplugin((options: UserOptions) => {
-  return {
-    name: 'unplugin-prefixed-name',
-    // webpack's id filter is outside of loader logic,
-    // an additional hook is needed for better perf on webpack
-    transformInclude(id) {
-      return id.endsWith('.vue')
-    },
-    // just like rollup transform
-    transform(code) {
-      return code.replace(/<template>/, '<template><div>Injected</div>')
-    },
-    // more hooks coming
-  }
-})
-
-export const vitePlugin = unplugin.vite
-export const rollupPlugin = unplugin.rollup
-export const webpackPlugin = unplugin.webpack
-export const rspackPlugin = unplugin.rspack
-export const esbuildPlugin = unplugin.esbuild
-```
+> Check the [unplugin-starter](https://github.com/unplugin/unplugin-starter) repository for more details.

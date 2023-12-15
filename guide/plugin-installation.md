@@ -19,12 +19,13 @@ pnpm add unplugin-starter -D
 ```bash [bun]
 bun add unplugin-starter -D
 ```
-
 :::
 
-## Vite
+## Bundler & Framework Integration
 
-```ts
+::: code-group
+
+```ts [Vite]
 // vite.config.ts
 import Starter from 'unplugin-starter/vite'
 
@@ -35,9 +36,8 @@ export default defineConfig({
 })
 ```
 
-## Rollup
 
-```js
+```js [Rollup]
 // rollup.config.js
 import Starter from 'unplugin-starter/rollup'
 
@@ -48,9 +48,8 @@ export default {
 }
 ```
 
-## Webpack
 
-```js
+```js [Webpack]
 // webpack.config.js
 module.exports = {
   /* ... */
@@ -60,9 +59,7 @@ module.exports = {
 }
 ```
 
-## Rspack
-
-```js
+```js [Rspack]
 // rspack.config.js
 module.exports = {
   /* ... */
@@ -72,9 +69,8 @@ module.exports = {
 }
 ```
 
-## esbuild
 
-```js
+```js [Esbuild]
 // esbuild.config.js
 import { build } from 'esbuild'
 import Starter from 'unplugin-starter/esbuild'
@@ -84,9 +80,7 @@ build({
 })
 ```
 
-## Vue CLI
-
-```js
+```js [Vue-Cli]
 // vue.config.js
 module.exports = {
   configureWebpack: {
@@ -97,8 +91,7 @@ module.exports = {
 }
 ```
 
-## Nuxt
-```js
+```js [Nuxt]
 // nuxt.config.ts
 export default defineNuxtConfig({
   modules: [
@@ -107,9 +100,7 @@ export default defineNuxtConfig({
 })
 ```
 
-## Astro
-
-```js
+```js [Astro]
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
 import Starter from 'unplugin-turbo-console/astro'
