@@ -1,4 +1,8 @@
 import { defineConfig } from 'vitepress'
+import Components from 'unplugin-vue-components/vite'
+import Unocss from 'unocss/vite'
+import { presetUno, presetAttributify, presetIcons } from 'unocss'
+import Icons from 'unplugin-icons/vite'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -13,7 +17,7 @@ export default defineConfig({
     search: {
       provider: 'local'
     },
-    
+
     logo: '/logo.svg',
 
     sidebar: [
@@ -45,6 +49,27 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/unjs/unplugin' }
+    ]
+  },
+  vite: {
+    plugins: [
+      Components({
+        include: [/\.vue/, /\.md/],
+        dirs: '.vitepress/components',
+        dts: '.vitepress/components.d.ts',
+      }),
+      Unocss({
+        presets: [
+          presetUno({
+            dark: 'media',
+          }),
+          presetAttributify(),
+          presetIcons({
+            scale: 1.2,
+          }),
+        ],
+      }),
+      Icons()
     ]
   }
 })
