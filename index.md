@@ -15,7 +15,7 @@ hero:
       link: /guide/getting-started
     - theme: alt
       text: Showcase
-      link: /Showcase
+      link: /showcase
     - theme: alt
       text: View on GitHub
       link: https://github.com/unjs/unplugin
