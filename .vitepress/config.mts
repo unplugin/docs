@@ -3,11 +3,12 @@ import Components from 'unplugin-vue-components/vite'
 import Unocss from 'unocss/vite'
 import Icons from 'unplugin-icons/vite'
 import { fileURLToPath } from 'node:url'
+import { title,description,ogImage } from './constance'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "unplugin",
-  description: "unplguin website",
+  title,
+  description,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -17,8 +18,6 @@ export default defineConfig({
     search: {
       provider: 'local'
     },
-
-    logo: '/logo.svg',
 
     sidebar: [
       {
@@ -58,13 +57,13 @@ export default defineConfig({
   },
   head: [
     ['meta', { name: 'theme-color', content: '#ffffff' }],
-    ['link', { rel: 'icon', href: '/logo.svg', type: 'image/svg+xml' }],
+    ['link', { rel: 'icon', href: '/logo-auto-toggle.svg', type: 'image/svg+xml' }],
     ['meta', { name: 'author', content: 'Nuxt Contrib' }],
-    ['meta', { property: 'og:title', content: 'unplugin' }],
-    ['meta', { property: 'og:image', content: 'https://unplugin.vercel.app/og.png' }],
-    ['meta', { property: 'og:description', content: 'Unified plugin system for Vite, Rollup, Webpack, esbuild, and more' }],
+    ['meta', { property: 'og:title', content: title }],
+    ['meta', { property: 'og:image', content: ogImage }],
+    ['meta', { property: 'og:description', content: description }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:image', content: 'https://unplugin.vercel.app/og.png' }],
+    ['meta', { name: 'twitter:image', content: ogImage }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, viewport-fit=cover' }],
   ],
   vite: {
