@@ -56,8 +56,4 @@ const { repositories } = data
 a {
   text-decoration: none;
 }
-
-.repository-card {
-  border:1px solid
-}
 </style>
