@@ -8,7 +8,7 @@ import { $fetch } from 'ofetch'
 const gql = `#graphql
 query {
   organization(login: "unplugin") {
-    repositories(first: 10, orderBy: {field: STARGAZERS, direction: DESC}) {
+    repositories(first: 20, orderBy: {field: STARGAZERS, direction: DESC}) {
       nodes {
         name
         stargazers {
@@ -47,7 +47,9 @@ export default {
 
       if (results.data) {
         return {
-          repositories: results.data.organization.repositories.nodes?.filter(repo => repo.name.includes('unplugin') && !repo.isTemplate),
+          repositories: results.data.organization.repositories.nodes
+            ?.filter(repo => repo.name.includes('unplugin') && !repo.isTemplate)
+            ?.slice(0, 12),
         }
       }
       else {

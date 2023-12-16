@@ -1,8 +1,8 @@
 import { defineConfig } from 'vitepress'
 import Components from 'unplugin-vue-components/vite'
 import Unocss from 'unocss/vite'
-import { presetUno, presetAttributify, presetIcons } from 'unocss'
 import Icons from 'unplugin-icons/vite'
+import { fileURLToPath } from 'node:url'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -49,8 +49,24 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/unjs/unplugin' }
-    ]
+    ],
+
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright (c) 2021-PRESENT Nuxt Contrib',
+    },
   },
+  head: [
+    ['meta', { name: 'theme-color', content: '#ffffff' }],
+    ['link', { rel: 'icon', href: '/logo.svg', type: 'image/svg+xml' }],
+    ['meta', { name: 'author', content: 'Nuxt Contrib' }],
+    ['meta', { property: 'og:title', content: 'unplugin' }],
+    ['meta', { property: 'og:image', content: 'https://unplugin.vercel.app/og.png' }],
+    ['meta', { property: 'og:description', content: 'Unified plugin system for Vite, Rollup, Webpack, esbuild, and more' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:image', content: 'https://unplugin.vercel.app/og.png' }],
+    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, viewport-fit=cover' }],
+  ],
   vite: {
     plugins: [
       Components({
@@ -58,15 +74,7 @@ export default defineConfig({
         dirs: '.vitepress/components',
         dts: '.vitepress/components.d.ts',
       }),
-      Unocss({
-        presets: [
-          presetUno(),
-          presetAttributify(),
-          presetIcons({
-            scale: 1.2,
-          }),
-        ],
-      }),
+      Unocss(fileURLToPath(new URL('./uno.config.ts', import.meta.url)),),
       Icons()
     ]
   }

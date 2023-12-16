@@ -43,16 +43,36 @@
  *   in custom container, badges, etc.
  * -------------------------------------------------------------------------- */
 
+  :root {
+    --vp-c-brand-1: #000;
+    --vp-c-brand-2: #18181b;
+    --vp-c-brand-3: #09090b;
+    --vp-button-brand-bg: #171717;
+    --vp-custom-block-tip-bg: 
+    --vp-c-text-2: #444;
+  }
+
+  .dark {
+    --vp-c-brand-1: #fff;
+    --vp-c-brand-2: #71717a;
+    --vp-c-brand-3: #52525b;
+    --vp-c-brand-soft: #09090b50;
+    --vp-c-text-2: #999;
+    --vp-button-brand-bg: #ededed;
+    --vp-button-brand-text: #0a0a0a;
+
+    --vp-home-hero-name-background: -webkit-linear-gradient(
+      0deg,
+      #fff 30%,
+      #d1d5db 1%
+    )!important;
+  }
+
  :root {
   --vp-c-default-1: var(--vp-c-gray-1);
   --vp-c-default-2: var(--vp-c-gray-2);
   --vp-c-default-3: var(--vp-c-gray-3);
   --vp-c-default-soft: var(--vp-c-gray-soft);
-
-  --vp-c-brand-1: var(--vp-c-indigo-1);
-  --vp-c-brand-2: var(--vp-c-indigo-2);
-  --vp-c-brand-3: var(--vp-c-indigo-3);
-  --vp-c-brand-soft: var(--vp-c-indigo-soft);
 
   --vp-c-tip-1: var(--vp-c-brand-1);
   --vp-c-tip-2: var(--vp-c-brand-2);
@@ -76,8 +96,6 @@
 
 :root {
   --vp-button-brand-border: transparent;
-  --vp-button-brand-text: var(--vp-c-white);
-  --vp-button-brand-bg: var(--vp-c-brand-3);
   --vp-button-brand-hover-border: transparent;
   --vp-button-brand-hover-text: var(--vp-c-white);
   --vp-button-brand-hover-bg: var(--vp-c-brand-2);
@@ -93,9 +111,9 @@
 :root {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
-    #d1d5db 50%,
-    #94a3b8
+    0deg,
+    #333 30%,
+    #888 1%
   );
 
   --vp-home-hero-image-background-image: linear-gradient(
