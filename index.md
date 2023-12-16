@@ -25,7 +25,9 @@ features:
     details: Unified plugin system for build tools.
     icon: ⚖️
 
-  - title: Unified
-    details: Unified plugin system for build tools.
-    icon: ⚖️
+  - title: Nested Plugins
+    details: Constructing multiple nested plugins to behave like a single one.
+    icon: 🔗
 ---
+
+<HomePage />

@@ -3,9 +3,7 @@ import { presetUno, presetAttributify, presetIcons } from 'unocss'
 
 export default defineConfig({
   presets: [
-    presetUno({
-      dark: 'media',
-    }),
+    presetUno(),
     presetAttributify(),
     presetIcons({
       scale: 1.2,

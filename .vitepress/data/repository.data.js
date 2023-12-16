@@ -51,10 +51,14 @@ export default {
         }
       }
       else {
+        // eslint-disable-next-line no-console
+        console.log('[prefetch] fetch error, use back data')
         return readFileSync(join(dirname(fileURLToPath(import.meta.url)), './repository_back.json'), 'utf-8')
       }
     }
     catch (error) {
+      // eslint-disable-next-line no-console
+      console.log('[prefetch] fetch error, use back data')
       return readFileSync(join(dirname(fileURLToPath(import.meta.url)), './repository_back.json'), 'utf-8')
     }
   },

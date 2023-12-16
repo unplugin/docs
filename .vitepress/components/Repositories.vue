@@ -5,11 +5,12 @@ const { repositories } = data
 </script>
 
 <template>
-  <div flex="~ wrap" gap-3>
+  <div flex="~ wrap" gap-3 justify-between items-center>
     <a
       v-for="(item, index) in repositories" :key="index"
       w-84 h-40 px-4 py-2 unset
       border="1 solid gray-300" rounded-md
+      dark="border-gray-700"
       cursor-pointer
       hover="shadow-md"
       target="_blank"
@@ -18,13 +19,13 @@ const { repositories } = data
       justify-between
     >
       <div flex items-center gap-2>
-        <img :src="item.owner.avatarUrl" w-4 h-4 alt="">
-        <span text-gray-500 text-14px>{{ item.owner.login }}</span>
+        <img :src="item.owner.avatarUrl" rounded-full w-4 h-4 alt="">
+        <span dark="text-gray-400" text-gray-500 text-16px>{{ item.owner.login }}</span>
       </div>
-      <div font-semibold text-gray-900>
+      <div font-semibold dark="text-gray-200" text-gray-900 text-16px>
         {{ item.name }}
       </div>
-      <div text-gray-500 flex-auto text-14px>
+      <div text-gray-500 dark="text-gray-400" flex-auto mt-1 text-14px>
         <span line-clamp-2>
           {{ item.description }}
         </span>
@@ -36,13 +37,13 @@ const { repositories } = data
               'background-color': item.primaryLanguage.color,
             }"
           />
-          <div text="12px gray-500">{{ item.primaryLanguage.name }}</div>
+          <div text="14px gray-500" dark="text-gray-400">{{ item.primaryLanguage.name }}</div>
         </div>
-        <div flex items-center gap-1 text="12px gray-500">
+        <div flex items-center gap-1 text="14px gray-500" dark="text-gray-400">
           <i class="i-lucide-star" />
           <div>{{ (item.stargazers.totalCount).toLocaleString() }}</div>
         </div>
-        <div flex items-center gap-1 text="12px gray-500">
+        <div flex items-center gap-1 text="14px gray-500" dark="text-gray-400">
           <i class="i-lucide-git-fork" />
           <div>{{ item.forkCount }}</div>
         </div>
@@ -54,6 +55,9 @@ const { repositories } = data
 <style scoped>
 a {
   text-decoration: none;
-  color: tr;
+}
+
+.repository-card {
+  border:1px solid
 }
 </style>

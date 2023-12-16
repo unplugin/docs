@@ -60,9 +60,7 @@ export default defineConfig({
       }),
       Unocss({
         presets: [
-          presetUno({
-            dark: 'media',
-          }),
+          presetUno(),
           presetAttributify(),
           presetIcons({
             scale: 1.2,
