@@ -17,7 +17,6 @@ export interface Repository {
   forkCount: number
 }
 
-
 declare const data: {
   repositories: Repository[]
 }
