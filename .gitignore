@@ -4,3 +4,5 @@ node_modules
 .env
 .vitepress/components.d.ts
 .vercel
+showcase/*.md
+!showcase/index.md

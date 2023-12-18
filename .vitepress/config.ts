@@ -4,6 +4,7 @@ import Components from 'unplugin-vue-components/vite'
 import Unocss from 'unocss/vite'
 import Icons from 'unplugin-icons/vite'
 import { description, ogImage, title } from './constance'
+import { repositories } from './data/meta'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -45,9 +46,17 @@ export default defineConfig({
       '/showcase/': [
         {
           text: 'Showcase',
-          link: '/showcase/',
           items: [
-            { text: 'unplugin-1', link: '/showcase/unplugin-1' },
+            {
+              text: 'Overview',
+              link: '/showcase/',
+            },
+            ...repositories.map(repo => (
+              {
+                text: repo.name,
+                link: `/showcase/${repo.name}`,
+              }
+            )),
           ],
         },
       ],
@@ -103,7 +112,7 @@ export default defineConfig({
   vite: {
     plugins: [
       Components({
-        include: [/\.vue/, /\.md/],
+        include: [/\.vue/],
         dirs: '.vitepress/components',
         dts: '.vitepress/components.d.ts',
       }),

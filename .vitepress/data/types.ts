@@ -15,9 +15,7 @@ export interface Repository {
     color: string
   }
   forkCount: number
+  object: {
+    text: string
+  }
 }
-
-declare const data: {
-  repositories: Repository[]
-}
-export { data }
