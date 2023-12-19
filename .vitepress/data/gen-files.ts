@@ -104,8 +104,10 @@ function main() {
       join(dirname(fileURLToPath(import.meta.url)), './repository.json'),
       JSON.stringify(repoMeta, null, 2),
     )
-
+    consola.success('[repository.json] generate success!')
     consola.success('All files generate done!')
+  }).catch((error) => {
+    consola.error(error)
   })
 }
 
