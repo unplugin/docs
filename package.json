@@ -3,12 +3,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "fetch-repo": "tsx ./scripts/fetch-repo.ts",
-    "dev": "vitepress dev",
-    "build": "vitepress build",
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview",
+    "fetch-data": "tsx ./.vitepress/data/fetch-data.ts",
+    "dev": "vitepress dev --open",
+    "build": "pnpm fetch-data && vitepress build",
     "lint": "eslint . && case-police '**/*.md'"
   },
   "devDependencies": {

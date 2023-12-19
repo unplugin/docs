@@ -1,4 +1,4 @@
-export const repositories = [
+export const repositoryMeta = [
   {
     owner: 'unplugin',
     name: 'unplugin-vue-components',

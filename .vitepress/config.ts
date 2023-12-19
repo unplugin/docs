@@ -1,10 +1,7 @@
-import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vitepress'
-import Components from 'unplugin-vue-components/vite'
-import Unocss from 'unocss/vite'
-import Icons from 'unplugin-icons/vite'
 import { description, ogImage, title } from './constance'
-import { repositories } from './data/meta'
+import { repositoryMeta } from './data/meta'
+import viteConfig from './vite.config'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -51,7 +48,7 @@ export default defineConfig({
               text: 'Overview',
               link: '/showcase/',
             },
-            ...repositories.map(repo => (
+            ...repositoryMeta.map(repo => (
               {
                 text: repo.name,
                 link: `/showcase/${repo.name}`,
@@ -61,33 +58,6 @@ export default defineConfig({
         },
       ],
     },
-
-    // sidebar: [
-    //   {
-    //     text: 'Guide',
-    //     items: [
-    //       { text: 'Getting Started', link: '/guide/getting-started' },
-    //       { text: 'Plugin Installation', link: '/guide/plugin-installation' }
-    //     ]
-    //   },
-    //   {
-    //     text: 'Usage',
-    //     items: [
-    //       { text: 'Supported Hooks', link: '/usage/supported-hooks' },
-    //       { text: 'Supported Context', link: '/usage/supported-context' },
-    //       { text: 'Nested Plugins', link: '/usage/nested-plugins' },
-    //       { text: 'Bundler-Specific Logic', link: '/usage/bundler-specific-logic' }
-    //     ]
-    //   },
-    //   {
-    //     text: 'Showcase',
-    //     link: '/showcase'
-    //   },
-    //   {
-    //     text: 'Conventions',
-    //     link: '/conventions'
-    //   }
-    // ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/unjs/unplugin' },
@@ -109,15 +79,6 @@ export default defineConfig({
     ['meta', { name: 'twitter:image', content: ogImage }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, viewport-fit=cover' }],
   ],
-  vite: {
-    plugins: [
-      Components({
-        include: [/\.vue/],
-        dirs: '.vitepress/components',
-        dts: '.vitepress/components.d.ts',
-      }),
-      Unocss(fileURLToPath(new URL('./uno.config.ts', import.meta.url))),
-      Icons(),
-    ],
-  },
+  ignoreDeadLinks: true,
+  vite: viteConfig,
 })

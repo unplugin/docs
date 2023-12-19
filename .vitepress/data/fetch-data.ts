@@ -5,8 +5,8 @@ import { fileURLToPath } from 'node:url'
 import { env } from 'node:process'
 import { $fetch } from 'ofetch'
 import { consola } from 'consola'
-import type { Repository } from './types'
-import { repositories } from './meta'
+import type { Repository } from './repository.data'
+import { repositoryMeta } from './meta'
 import { fixMdContent } from './patch'
 
 const gql = `#graphql
@@ -74,7 +74,7 @@ async function fetchRepo(meta: {
 }
 
 function main() {
-  const fetchs = repositories.map((repository) => {
+  const fetchs = repositoryMeta.map((repository) => {
     return fetchRepo({
       name: repository.name,
       owner: repository.owner,
@@ -82,10 +82,29 @@ function main() {
     })
   })
 
-  Promise.allSettled(fetchs).then((_res) => {
-    // const repoMeta = res.filter(r => r.status === 'fulfilled').map(r => r.value)
-    // create a file
-    // writeFileSync(join(dirname(fileURLToPath(import.meta.url)), './repository.json'), JSON.stringify(repoMeta, null, 2))
+  Promise.allSettled(fetchs).then((res) => {
+    const repoMeta = res?.map((item) => {
+      if (item.status === 'fulfilled') {
+        return {
+          name: item.value?.name,
+          stargazers: item.value?.stargazers,
+          owner: item.value?.owner,
+          description: item.value?.description,
+          url: item.value?.url,
+          isTemplate: item.value?.isTemplate,
+          primaryLanguage: item.value?.primaryLanguage,
+          forkCount: item.value?.forkCount,
+        }
+      }
+
+      return null
+    })?.filter(item => item && item.name)
+
+    writeFileSync(
+      join(dirname(fileURLToPath(import.meta.url)), './repository.json'),
+      JSON.stringify(repoMeta, null, 2),
+    )
+
     consola.success('All files generate done!')
   })
 }
