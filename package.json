@@ -6,7 +6,8 @@
     "gen-files": "tsx ./.vitepress/data/gen-files.ts",
     "dev": "vitepress dev --open",
     "build": "pnpm gen-files && vitepress build",
-    "lint": "eslint . && case-police '**/*.md'"
+    "lint": "eslint . && case-police '**/*.md'",
+    "prepare": "simple-git-hooks"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.4.6",
