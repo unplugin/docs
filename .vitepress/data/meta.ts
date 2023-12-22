@@ -34,7 +34,7 @@ export const repositoryMeta = [
   {
     owner: 'unplugin',
     name: 'unplugin-vue-cssvars',
-    readme: 'master:README.md',
+    defaultBranch: 'master',
   },
   {
     owner: 'unplugin',

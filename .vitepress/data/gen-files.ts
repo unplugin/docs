@@ -7,7 +7,6 @@ import { $fetch } from 'ofetch'
 import { consola } from 'consola'
 import type { Repository } from './repository.data'
 import { repositoryMeta } from './meta'
-import { fixMdContent } from './patch'
 
 const gql = `#graphql
 query repositoryQuery($owner: String!, $name: String!, $readme: String!) {
@@ -63,7 +62,7 @@ async function fetchRepo(meta: {
 
     writeFileSync(
       join(dirname(fileURLToPath(import.meta.url)), `../../showcase/${name}.md`),
-      fixMdContent(repositoryInfo.object.text),
+      repositoryInfo.object.text,
     )
     consola.success(`[${name}.md]: generate success`)
     return repositoryInfo
@@ -78,7 +77,7 @@ function main() {
     return fetchRepo({
       name: repository.name,
       owner: repository.owner,
-      readme: repository.readme,
+      readme: repository.defaultBranch ? `${repository.defaultBranch}:README.md` : 'main:README.md',
     })
   })
 
