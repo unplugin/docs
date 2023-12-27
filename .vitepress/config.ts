@@ -1,7 +1,8 @@
+import MarkdownItGitHubAlerts from 'markdown-it-github-alerts'
 import { defineConfig } from 'vitepress'
-import { description, ogImage, title } from './constance'
 import { repositoryMeta } from './data/meta'
-import viteConfig from './vite.config'
+import { description, ogImage, title } from './constance'
+import vite from './vite.config'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -38,6 +39,10 @@ export default defineConfig({
         {
           text: 'Conventions',
           link: '/guide/conventions',
+        },
+        {
+          text: 'Showcase',
+          link: '/showcase/',
         },
       ],
       '/showcase/': [
@@ -79,6 +84,11 @@ export default defineConfig({
     ['meta', { name: 'twitter:image', content: ogImage }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, viewport-fit=cover' }],
   ],
+  markdown: {
+    config: (md) => {
+      md.use(MarkdownItGitHubAlerts)
+    },
+  },
   ignoreDeadLinks: true,
-  vite: viteConfig,
+  vite,
 })

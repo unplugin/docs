@@ -1,10 +1,10 @@
 import { basename } from 'node:path'
-import type { Plugin } from 'vite'
+import type { PluginOption } from 'vite'
 import { repositoryMeta } from '../data/meta'
 
 const repos = repositoryMeta.map(({ name }) => `${name}`)
 
-export function MarkdownTransform(): Plugin {
+export function MarkdownTransform(): PluginOption {
   return {
     name: 'unplugin-md-transform',
     enforce: 'pre',
@@ -18,9 +18,9 @@ export function MarkdownTransform(): Plugin {
       code = code.replaceAll('<br>', '<br> \n')
 
       // https://github.com/unplugin/unplugin-icons/blob/main/README.md?plain=1#L425
-      code = code.replaceAll('versions < 2.7', 'versions &lt; 2.7')
+      code = code.replaceAll(' < ', ' &lt; ').replaceAll(' > ', ' &gt; ')
 
-      // replace markdown img link,
+      // replace markdown img link
       // code reference: https://github.com/unjs/ungh/blob/main/utils/markdown.ts
       const MARKDOWN_LINK_RE = /(?<link>\[.*?]\((?<url>.*?)\)|<img.*?src="(?<url2>.*?)".*?>)/g
       const GH_RAW_URL = 'https://raw.githubusercontent.com'

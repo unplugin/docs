@@ -1,4 +1,8 @@
-  :root {
+@import 'markdown-it-github-alerts/styles/github-colors-light.css';
+@import 'markdown-it-github-alerts/styles/github-colors-dark-media.css';
+@import 'markdown-it-github-alerts/styles/github-base.css';
+
+:root {
     --vp-c-brand-1: #000;
     --vp-c-brand-2: #383838;
     --vp-c-brand-3: #09090b;
