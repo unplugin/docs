@@ -13,7 +13,6 @@ export default defineConfig({
       dirs: '.vitepress/components',
       dts: '.vitepress/components.d.ts',
     }),
-    // @ts-expect-error any
     Unocss(fileURLToPath(new URL('./uno.config.ts', import.meta.url))),
     Icons(),
   ],

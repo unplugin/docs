@@ -60,9 +60,24 @@ async function fetchRepo(meta: {
 
     const repositoryInfo = results.data.repository as Repository
 
+    const markdownFrontmatter = `---
+title: ${repositoryInfo.name}
+owner: ${repositoryInfo.owner.login}
+name: ${repositoryInfo.name}
+stars: ${repositoryInfo.stargazers.totalCount}
+forks: ${repositoryInfo.forkCount}
+outline: deep
+---
+
+<RepoInfo :owner="$frontmatter.owner" :name="$frontmatter.name" :stars="$frontmatter.stars" :forks="$frontmatter.forks" />
+
+---
+
+`
+
     writeFileSync(
       join(dirname(fileURLToPath(import.meta.url)), `../../showcase/${name}.md`),
-      repositoryInfo.object.text,
+      markdownFrontmatter + repositoryInfo.object.text,
     )
     consola.success(`[${name}.md]: generate success`)
     return repositoryInfo

@@ -35,6 +35,8 @@ export function MarkdownTransform(): PluginOption {
         return match.replace(path, `${GH_RAW_URL}/${owner}/${name}/${_defaultBranch}/${path.replace(/^\.\//, '')}`)
       })
 
+      // code = `<RepoInfo title="$frontmatter.title}" />\n${code}`
+
       return code
     },
   }

@@ -37,12 +37,12 @@ import { data as repositoryData } from '../data/repository.data'
           <div text="14px gray-500" dark="text-gray-400">{{ item.primaryLanguage.name }}</div>
         </div>
         <div flex items-center gap-1 text="14px gray-500" dark="text-gray-400">
-          <i class="i-lucide-star" />
+          <i class="i-radix-icons-star" />
           <div>{{ (item.stargazers.totalCount).toLocaleString() }}</div>
         </div>
         <div flex items-center gap-1 text="14px gray-500" dark="text-gray-400">
           <i class="i-lucide-git-fork" />
-          <div>{{ item.forkCount }}</div>
+          <div>{{ (item.forkCount).toLocaleString() }}</div>
         </div>
       </div>
     </a>

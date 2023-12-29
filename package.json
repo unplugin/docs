@@ -11,7 +11,10 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.0",
+    "@iconify-json/heroicons": "^1.1.19",
     "@iconify-json/lucide": "^1.1.148",
+    "@iconify-json/radix-icons": "^1.1.14",
+    "@iconify-json/simple-icons": "^1.1.86",
     "@types/node": "^20.10.5",
     "case-police": "^0.6.1",
     "consola": "^3.2.3",

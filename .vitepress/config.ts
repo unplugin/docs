@@ -89,6 +89,7 @@ export default defineConfig({
       md.use(MarkdownItGitHubAlerts)
     },
   },
+  cleanUrls: true,
   ignoreDeadLinks: true,
   vite,
 })
