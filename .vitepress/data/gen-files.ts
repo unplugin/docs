@@ -8,6 +8,8 @@ import { consola } from 'consola'
 import type { Repository } from './repository.data'
 import { repositoryMeta } from './meta'
 
+const GITHUB_TOKEN = env.GITHUB_TOKEN
+
 const gql = `#graphql
 query repositoryQuery($owner: String!, $name: String!, $readme: String!) {
   repository(owner: $owner, name: $name) {
@@ -46,7 +48,7 @@ async function fetchRepo(meta: {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${env.GITHUB_TOKEN}`,
+        'Authorization': `Bearer ${GITHUB_TOKEN}`,
       },
       body: JSON.stringify({
         query: gql,
@@ -88,6 +90,11 @@ outline: deep
 }
 
 function main() {
+  if (!GITHUB_TOKEN) {
+    consola.error('GITHUB_TOKEN is missing, please refer to https://github.com/unplugin/docs#development')
+    return false
+  }
+
   const fetchs = repositoryMeta.map((repository) => {
     return fetchRepo({
       name: repository.name,
