@@ -2,7 +2,7 @@
 aside: false
 ---
 
-# Conventions
+# Plugin Conventions
 - Plugins powered by `unplugin` should have a clear name with `unplugin-` prefix.
 - Include `unplugin` keyword in `package.json`.
 - To provide better DX, packages could export 2 kinds of entry points:
