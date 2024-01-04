@@ -28,7 +28,7 @@ features:
       src: /features/vitejs.svg
 
   - title: Rollup
-    details: The JavaScript module bundler.
+    details: Next Generation ES module bundler.
     link: https://vitejs.dev/
     icon:
       src: /features/rollup.svg

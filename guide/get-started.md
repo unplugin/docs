@@ -1,5 +1,6 @@
 ---
 outline: deep
+lastUpdated: true
 ---
 
 # Get Started
@@ -18,7 +19,7 @@ outline: deep
 
 ## Trying It Online
 
-You can try Unplugin in your browser directly.
+You can try **Unplugin** in your browser directly.
 
 [![open](/open_in_codeflow.svg)](https://stackblitz.com/~/github.com/yuyinws/unplugin-starter?file=src/index.ts)
 
@@ -208,7 +209,7 @@ export const esbuildPlugin = unplugin.esbuild
 
 ##  Nested Plugins
 
-Since `v0.10.0`, unplugin supports constructing multiple nested plugins to behave like a single one.
+Since `v0.10.0`, **Unplugin** supports constructing multiple nested plugins to behave like a single one.
 
 ### Bundler Supported
 |         Rollup         | Vite | webpack 4 | webpack 5 | Rspack |    esbuild     |
@@ -216,7 +217,7 @@ Since `v0.10.0`, unplugin supports constructing multiple nested plugins to behav
 | ✅ `>=3.1`<sup>1</sup> |  ✅  |    ✅     |    ✅     |   ✅   | <span style="color: #ca8a04">⚠️</span><sup>2</sup> |
 
 ::: details Notice
-1. Rollup supports nested plugins since [v3.1.0](https://github.com/rollup/rollup/releases/tag/v3.1.0). Plugin author should ask users to have a Rollup version of `>=3.1.0` when using nested plugins. For single plugin format, unplugin works for any version of Rollup.
+1. Rollup supports nested plugins since [v3.1.0](https://github.com/rollup/rollup/releases/tag/v3.1.0). Plugin author should ask users to have a Rollup version of `>=3.1.0` when using nested plugins. For single plugin format, **Unplugin** works for any version of Rollup.
 2. Since esbuild does not have a built-in transform phase, the `transform` hook of the nested plugin will not work on esbuild yet. Other hooks like `load` or `resolveId` work fine. We will try to find a way to support it in the future.
 :::
 
@@ -243,7 +244,7 @@ export const unplugin = createUnplugin((options: UserOptions) => {
 ```
 ## Bundler-Specific Logic
 
-While `unplugin` provides compatible layers for some hooks, the functionality of it is limited to the common subset of the build's plugins capability. For more advanced bundler-specific usages, `unplugin` provides an escape hatch for that.
+While **Unplugin** provides compatible layers for some hooks, the functionality of it is limited to the common subset of the build's plugins capability. For more advanced bundler-specific usages, **Unplugin** provides an escape hatch for that.
 
 ### Hooks
 
@@ -252,7 +253,7 @@ export const unplugin = createUnplugin((options: UserOptions, meta) => {
   console.log(meta.framework) // 'vite' | 'rollup' | 'webpack' | 'rspack' | 'esbuild'
 
   return {
-    // Common unplugin hooks
+    // Common Unplugin hooks
     name: 'unplugin-prefixed-name',
     transformInclude(id) { /* ... */ },
     transform(code) { /* ... */ },
@@ -279,7 +280,7 @@ export const unplugin = createUnplugin((options: UserOptions, meta) => {
       // onResolveFilter?: RegExp,
       // onLoadFilter?: RegExp,
 
-      // Tell esbuild how to interpret the contents. By default unplugin tries to guess the loader
+      // Tell esbuild how to interpret the contents. By default Unplugin tries to guess the loader
       // from file extension (eg: .js -> "js", .jsx -> 'jsx')
       // loader?: (Loader | (code: string, id: string) => Loader)
 
