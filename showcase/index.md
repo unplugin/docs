@@ -1,6 +1,5 @@
 ---
 aside: false
-lastUpdated: true
 ---
 
 # Overview

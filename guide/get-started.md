@@ -1,6 +1,6 @@
 ---
 outline: deep
-lastUpdated: true
+lastUpdated: false
 ---
 
 # Get Started
