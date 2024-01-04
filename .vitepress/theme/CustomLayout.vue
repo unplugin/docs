@@ -42,6 +42,5 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 </script>
 
 <template>
-  <!-- eslint-disable-next-line vue/component-name-in-template-casing -->
   <DefaultTheme.Layout />
 </template>
