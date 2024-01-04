@@ -14,7 +14,7 @@
       }
 
       #line {
-        stroke: #6e6e6e;
+        stroke: #d1d5db;
       }
     }
   </style>

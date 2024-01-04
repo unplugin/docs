@@ -62,7 +62,7 @@ export default defineConfig({
 
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright (c) 2021-PRESENT Nuxt Contrib',
+      copyright: 'Copyright (c) 2021-PRESENT UnJS Team',
     },
   },
   head: [
