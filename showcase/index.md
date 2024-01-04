@@ -4,7 +4,7 @@ aside: false
 
 # Overview
 
-Here are a few unplugins maintained by the unplugin team, find more on [npm](https://npmjs.com/search?q=keywords%3Aunplugin).
+Here are a few unplugins maintained by the unplugin team, find more on [npm](https://www.npmjs.com/search?ranking=popularity&q=keywords%3Aunplugin).
 
 <Repositories />
 
