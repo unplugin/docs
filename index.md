@@ -21,13 +21,50 @@ hero:
       link: https://github.com/unjs/unplugin
 
 features:
-  - title: Unified
-    details: Unified plugin system for build tools.
-    icon: ⚖️
+  - title: Vite
+    details: Next Generation Frontend Tooling.
+    link: https://vitejs.dev/
+    icon:
+      src: /features/vitejs.svg
 
-  - title: Nested Plugins
-    details: Constructing multiple nested plugins to behave like a single one.
-    icon: 🔗
+  - title: Rollup
+    details: The JavaScript module bundler.
+    link: https://vitejs.dev/
+    icon:
+      src: /features/rollup.svg
+
+  - title: webpack
+    details: A static module bundler for modern JavaScript applications.
+    link: https://webpack.js.org/
+    icon:
+      src: /features/webpack.svg
+
+  - title: esbuild
+    details: An extremely fast bundler for the web.
+    link: https://esbuild.github.io/
+    icon:
+      src: /features/esbuild.svg
+
+  - title: Rspack
+    details: A fast Rust-based web bundler.
+    link: https://www.rspack.dev/
+    icon:
+      src: /features/rspack.png
+
+  - title: Nuxt
+    details: The Intuitive Vue Framework.
+    link: https://nuxt.com/
+    icon:
+      src: /features/nuxt.svg
+
+  - title: Astro
+    details: The web framework for content-driven websites.
+    link: https://nuxt.com/
+    icon:
+      src: /features/astro.svg
+
+  - title: More
+    details: More supports coming soon...
+    icon:
+      src: /features/more.svg
 ---
-
-<HomePage />
