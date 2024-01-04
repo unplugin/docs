@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/unplugin/docs/main/public/logo_auto_toggle.svg">
+<img src="https://raw.githubusercontent.com/unplugin/docs/main/public/logo.svg">
 </p>
 
 <h1 align="center">
