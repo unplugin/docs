@@ -51,20 +51,9 @@ features:
     icon:
       src: /features/rspack.png
 
-  - title: Nuxt
-    details: The Intuitive Vue Framework.
-    link: https://nuxt.com/
-    icon:
-      src: /features/nuxt.svg
-
-  - title: Astro
-    details: The web framework for content-driven websites.
-    link: https://astro.build/
-    icon:
-      src: /features/astro.svg
-
   - title: More
-    details: More supports coming soon...
+    details: More supported bundlers...
+    link: /guide/get-started.html#supported-hooks
     icon:
       src: /features/more.svg
 ---
