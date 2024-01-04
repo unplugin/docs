@@ -8,6 +8,7 @@ import vite from './vite.config'
 export default defineConfig({
   title,
   description,
+  lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

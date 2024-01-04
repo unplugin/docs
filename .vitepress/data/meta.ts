@@ -41,7 +41,12 @@ export const repositoryMeta = [
     name: 'unplugin-vue',
   },
   {
-    owner: 'posva',
-    name: 'unplugin-vue-router',
+    owner: 'unplugin',
+    name: 'unplugin-macros',
+  },
+  {
+    owner: 'unplugin',
+    name: 'unplugin-vue-ce',
+    defaultBranch: 'master',
   },
 ]

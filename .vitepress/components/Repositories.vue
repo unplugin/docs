@@ -3,13 +3,12 @@ import { data as repositoryData } from '../data/repository.data'
 </script>
 
 <template>
-  <div flex="~ wrap" gap-3 justify-between items-center>
+  <div flex="~ wrap" gap-3 items-center>
     <a
       v-for="(item, index) in repositoryData" :key="index"
-      w-84 h-40 px-4 py-2 unset
+      w-84 h-40 px-4 py-2 cursor-pointer
       border="1 solid gray-300" rounded-md
       dark="border-gray-700"
-      cursor-pointer
       hover="shadow-md"
       :href="`/showcase/${item.name}`"
       flex="~ col"
@@ -51,6 +50,7 @@ import { data as repositoryData } from '../data/repository.data'
 
 <style scoped>
 a {
+  cursor: pointer;
   text-decoration: none;
 }
 </style>
