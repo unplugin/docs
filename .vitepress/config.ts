@@ -68,7 +68,7 @@ export default defineConfig({
   },
   head: [
     ['meta', { name: 'theme-color', content: '#ffffff' }],
-    ['link', { rel: 'icon', href: '/logo_auto_toggle.svg', type: 'image/svg+xml' }],
+    ['link', { rel: 'icon', href: '/logo.svg', type: 'image/svg+xml' }],
     ['meta', { name: 'author', content: 'Nuxt Contrib' }],
     ['meta', { property: 'og:title', content: title }],
     ['meta', { property: 'og:image', content: ogImage }],

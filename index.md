@@ -7,7 +7,7 @@ hero:
   text: Unified plugin system
   tagline: Support Vite, Rollup, webpack, esbuild, and more
   image:
-    src: /logo_auto_toggle.svg
+    src: /logo.svg
     alt: Unplugin
   actions:
     - theme: brand
@@ -29,7 +29,7 @@ features:
 
   - title: Rollup
     details: Next Generation ES module bundler.
-    link: https://vitejs.dev/
+    link: https://rollupjs.org/
     icon:
       src: /features/rollup.svg
 
@@ -59,7 +59,7 @@ features:
 
   - title: Astro
     details: The web framework for content-driven websites.
-    link: https://nuxt.com/
+    link: https://astro.build/
     icon:
       src: /features/astro.svg
 
