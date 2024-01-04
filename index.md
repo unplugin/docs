@@ -7,7 +7,7 @@ hero:
   text: Unified plugin system
   tagline: Support Vite, Rollup, webpack, esbuild, and more
   image:
-    src: /logo.svg
+    src: /logo_auto_toggle.svg
     alt: Unplugin
   actions:
     - theme: brand
