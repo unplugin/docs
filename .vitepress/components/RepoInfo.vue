@@ -3,7 +3,7 @@ defineProps<{
   owner: string
   name: string
   stars: number
-  forks: string
+  forks: number
 }>()
 </script>
 
