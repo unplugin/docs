@@ -99,8 +99,12 @@ a > img {
 }
 
 img[src*="features"] {
-  height: 48px;
+  height: auto;
   width: 48px;
+}
+
+img[src*="/features/rspack"] {
+  margin-bottom: 28px!important;
 }
 
 ::view-transition-old(root),
