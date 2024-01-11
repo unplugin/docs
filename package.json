@@ -27,10 +27,12 @@
     "tsx": "^4.7.0",
     "typescript": "^5.3.3",
     "unocss": "^0.58.0",
+    "unplugin": "^1.6.0",
     "unplugin-icons": "^0.18.1",
     "unplugin-vue-components": "^0.26.0",
     "vite": "^5.0.10",
-    "vitepress": "1.0.0-rc.33",
+    "vitepress": "1.0.0-rc.36",
+    "vitepress-plugin-twoslash": "^0.9.18",
     "vue": "^3.3.13"
   },
   "simple-git-hooks": {

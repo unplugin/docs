@@ -1,5 +1,6 @@
 import MarkdownItGitHubAlerts from 'markdown-it-github-alerts'
 import { defineConfig } from 'vitepress'
+import { transformerTwoslash } from 'vitepress-plugin-twoslash'
 import { repositoryMeta } from './data/meta'
 import { description, ogImage, title } from './constance'
 import vite from './vite.config'
@@ -81,6 +82,9 @@ export default defineConfig({
     config: (md) => {
       md.use(MarkdownItGitHubAlerts)
     },
+    codeTransformers: [
+      transformerTwoslash(),
+    ],
   },
   ignoreDeadLinks: true,
   vite,

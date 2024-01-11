@@ -1,9 +1,10 @@
 // https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
-import type { Theme } from 'vitepress'
+import type { EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import 'uno.css'
 import './style.css'
+import TwoSlashFloatingVue from 'vitepress-plugin-twoslash/client'
 import CustomLayout from './CustomLayout.vue'
 
 export default {
@@ -11,7 +12,7 @@ export default {
   Layout: () => {
     return h(CustomLayout)
   },
-  enhanceApp() {
-    // ...
+  enhanceApp({ app }: EnhanceAppContext) {
+    app.use(TwoSlashFloatingVue as any)
   },
-} satisfies Theme
+}

@@ -166,24 +166,31 @@ export default defineConfig({
 
 ### Usage
 
-```ts{8-10,12-14}
+```ts{12-14,16-18} twoslash
+import type { UnpluginFactory } from 'unplugin'
 import { createUnplugin } from 'unplugin'
 
-export const unplugin = createUnplugin((options: UserOptions) => {
-  return {
-    name: 'unplugin-prefixed-name',
-    // webpack's id filter is outside of loader logic,
-    // an additional hook is needed for better perf on webpack
-    transformInclude(id) {
-      return id.endsWith('.vue')
-    },
-    // just like rollup transform
-    transform(code) {
-      return code.replace(/<template>/, '<template><div>Injected</div>')
-    },
-    // more hooks coming
-  }
+export interface Options {
+  // define your plugin options here
+}
+
+export const unpluginFactory: UnpluginFactory<Options | undefined> = options => ({
+  name: 'unplugin-starter',
+  // webpack's id filter is outside of loader logic,
+  // an additional hook is needed for better perf on webpack
+  transformInclude(id) {
+    return id.endsWith('main.ts')
+  },
+  // just like rollup transform
+  transform(code) {
+    return code.replace(/<template>/, '<template><div>Injected</div>')
+  },
+  // more hooks coming
 })
+
+export const unplugin = /* #__PURE__ */ createUnplugin(unpluginFactory)
+
+export default unplugin
 
 export const vitePlugin = unplugin.vite
 export const rollupPlugin = unplugin.rollup
@@ -222,25 +229,34 @@ Since `v0.10.0`, **Unplugin** supports constructing multiple nested plugins to b
 :::
 
 ### Usage
-```ts
+```ts twoslash
+import type { UnpluginFactory } from 'unplugin'
 import { createUnplugin } from 'unplugin'
 
-export const unplugin = createUnplugin((options: UserOptions) => {
-  return [
+export interface Options {
+  // define your plugin options here
+}
+
+export const unpluginFactory: UnpluginFactory<Options | undefined> = options => (
+  [
     {
       name: 'plugin-a',
       transform(code) {
-        // ...
+        return code.replace(/<template>/, '<template><div>Injected</div>')
       },
     },
     {
       name: 'plugin-b',
       resolveId(id) {
-        // ...
+        return id
       },
     },
   ]
-})
+)
+
+export const unplugin = /* #__PURE__ */ createUnplugin(unpluginFactory)
+
+export default unplugin
 ```
 ## Bundler-Specific Logic
 
@@ -248,32 +264,38 @@ While **Unplugin** provides compatible layers for some hooks, the functionality 
 
 ### Hooks
 
-```ts {2,11,18,21,24,27}
-export const unplugin = createUnplugin((options: UserOptions, meta) => {
-  console.log(meta.framework) // 'vite' | 'rollup' | 'webpack' | 'rspack' | 'esbuild'
+```ts {9,18,24,27,30,33} twoslash
+import type { UnpluginFactory } from 'unplugin'
+import { createUnplugin } from 'unplugin'
 
+export interface Options {
+  // define your plugin options here
+}
+
+export const unpluginFactory: UnpluginFactory<Options | undefined> = (options, meta) => {
+  console.log(meta.framework) // vite rollup webpack esbuild rspack
   return {
-    // Common Unplugin hooks
-    name: 'unplugin-prefixed-name',
-    transformInclude(id) { /* ... */ },
-    transform(code) { /* ... */ },
-
-    // Bundler specific hooks
+    name: 'unplugin-starter',
+    transform(code) {
+      return code.replace(/<template>/, '<template><div>Injected</div>')
+    },
+    transformInclude(id) {
+      return id.endsWith('main.ts')
+    },
     vite: {
       // Vite plugin
       configureServer(server) {
         // configure Vite server
       },
-      // ...
     },
     rollup: {
       // Rollup plugin
     },
-    webpack(compiler) {
+    webpack(complier) {
       // Configure webpack compiler
     },
-    rspack(compiler) {
-      // Configure Rspack compiler
+    rspack(complier) {
+      // Configure webpack compiler
     },
     esbuild: {
       // Change the filter of onResolve and onLoad
@@ -288,7 +310,11 @@ export const unplugin = createUnplugin((options: UserOptions, meta) => {
       // setup?: EsbuildPlugin.setup,
     },
   }
-})
+}
+
+export const unplugin = /* #__PURE__ */ createUnplugin(unpluginFactory)
+
+export default unplugin
 ```
 
 ### Plugins
