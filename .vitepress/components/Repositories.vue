@@ -51,6 +51,6 @@ import { data as repositoryData } from '../data/repository.data'
 <style scoped>
 a {
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: none!important;
 }
 </style>
