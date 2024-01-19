@@ -3,7 +3,7 @@ outline: deep
 lastUpdated: false
 ---
 
-# Get Started
+# Getting Started
 
 ## Overview
 

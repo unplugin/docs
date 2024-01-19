@@ -6,4 +6,3 @@ node_modules
 .vercel
 showcase/*.md
 !showcase/index.md
-repository.json

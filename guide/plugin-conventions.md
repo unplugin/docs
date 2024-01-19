@@ -4,10 +4,12 @@ lastUpdated: false
 ---
 
 # Plugin Conventions
-- Plugins powered by **Unplugin** should have a clear name with `unplugin-` prefix.
+
+To have a better community and ecosystem, we encourage plugin authors to follow these conventions when creating unplugins.
+
+- Plugins powered by Unplugin should have a clear name with `unplugin-` prefix.
 - Include `unplugin` keyword in `package.json`.
 - To provide better DX, packages could export 2 kinds of entry points:
-
   - Default export: the returned value of `createUnplugin` function
 
     ```ts

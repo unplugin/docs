@@ -13,31 +13,30 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Guide', link: '/guide/get-started', activeMatch: '/guide/' },
+      { text: 'Guide', link: '/guide/', activeMatch: '/guide/' },
       { text: 'Showcase', link: '/showcase/', activeMatch: '/showcase/' },
     ],
     search: {
       provider: 'local',
     },
+    logo: {
+      light: '/logo_light.svg',
+      dark: '/logo_dark.svg',
+    },
 
     sidebar: {
-      '/guide/': [
+      '/': [
         {
           text: 'Guide',
           items: [
-            { text: 'Get Started', link: '/guide/get-started' },
-            { text: 'Why Unplugin', link: '/guide/why-unplugin' },
+            { text: 'Getting Started', link: '/guide/' },
+            // { text: 'Why Unplugin', link: '/guide/why' },
             { text: 'Plugin Conventions', link: '/guide/plugin-conventions' },
           ],
         },
         {
           text: 'Showcase',
           link: '/showcase/',
-        },
-      ],
-      '/showcase/': [
-        {
-          text: 'Showcase',
           items: [
             {
               text: 'Overview',
@@ -50,10 +49,6 @@ export default defineConfig({
               }
             )),
           ],
-        },
-        {
-          text: 'Guide',
-          link: '/guide/get-started',
         },
       ],
     },

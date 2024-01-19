@@ -4,16 +4,16 @@ sidebar: false
 
 hero:
   name: Unplugin
-  text: Unified plugin system
-  tagline: Support Vite, Rollup, webpack, esbuild, and more
+  text: The Unified<br>Plugin System
+  tagline: Supports Vite, Rollup, webpack, esbuild, and every framework built on top of them.
   image:
     light: /logo_light.svg
     dark: /logo_dark.svg
     alt: Unplugin
   actions:
     - theme: brand
-      text: Get Started
-      link: /guide/get-started
+      text: Getting Started
+      link: /guide/
     - theme: alt
       text: Showcase
       link: /showcase/
@@ -54,7 +54,7 @@ features:
 
   - title: More
     details: More supported bundlers...
-    link: /guide/get-started.html#supported-hooks
+    link: /guide/#supported-hooks
     icon:
       src: /features/more.svg
 ---
