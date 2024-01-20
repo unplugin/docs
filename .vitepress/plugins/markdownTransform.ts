@@ -5,6 +5,10 @@ import { repositoryMeta } from '../data/meta'
 const repos = repositoryMeta.map(({ name }) => `${name}`)
 
 export function MarkdownTransform(): PluginOption {
+  const MARKDOWN_LINK_RE = /(?<link>\[.*?]\((?<url>.*?)\)|<img.*?src="(?<url2>.*?)".*?>)/g
+  const GH_RAW_URL = 'https://raw.githubusercontent.com'
+  const GH_URL = 'https://github.com/unplugin'
+  const images = ['png', 'jpg', 'jpeg', 'gif', 'svg'].map(ext => `.${ext}`)
   return {
     name: 'unplugin-md-transform',
     enforce: 'pre',
@@ -22,8 +26,6 @@ export function MarkdownTransform(): PluginOption {
 
       // replace markdown img link
       // code reference: https://github.com/unjs/ungh/blob/main/utils/markdown.ts
-      const MARKDOWN_LINK_RE = /(?<link>\[.*?]\((?<url>.*?)\)|<img.*?src="(?<url2>.*?)".*?>)/g
-      const GH_RAW_URL = 'https://raw.githubusercontent.com'
       const { name, owner, defaultBranch } = repositoryMeta.find(({ name }) => name === basename(id, '.md'))!
       const _defaultBranch = defaultBranch || 'main'
       code = code.replaceAll(MARKDOWN_LINK_RE, (match, _, url: string | undefined, url2: string) => {
@@ -32,12 +34,58 @@ export function MarkdownTransform(): PluginOption {
         if (path.startsWith('http') || path.startsWith('https'))
           return match
 
-        return match.replace(path, `${GH_RAW_URL}/${owner}/${name}/${_defaultBranch}/${path.replace(/^\.\//, '')}`)
+        // handle images and links differently
+        return match.includes('<img') || images.some(ext => match.includes(ext))
+          ? match.replace(path, `${GH_RAW_URL}/${owner}/${name}/${_defaultBranch}/${path.replace(/^\.\//, '')}`)
+          : match.replace(path, `${GH_URL}/${name}/tree/${_defaultBranch}/${path.replace(/^\.\//, '')}`)
       })
 
-      // code = `<RepoInfo title="$frontmatter.title}" />\n${code}`
+      let useCode = code
+      let idx = 0
 
-      return code
+      while (true) {
+        const detailIdx = useCode.indexOf('<details>', idx)
+        if (detailIdx === -1)
+          break
+
+        const summaryIdx = useCode.indexOf('<summary>', idx + 10)
+        if (summaryIdx === -1)
+          break
+
+        const endSummaryIdx = useCode.indexOf('</summary>', summaryIdx + 10)
+        if (endSummaryIdx === -1)
+          break
+
+        const title = useCode.slice(summaryIdx + 9, endSummaryIdx)
+          .trim()
+          .replaceAll('<br>', '')
+          .replaceAll('<br/>', '')
+          .replaceAll('<br />', '')
+
+        const endDetailIdx = useCode.indexOf('</details>', endSummaryIdx + 11)
+        if (endDetailIdx === -1)
+          break
+
+        const detailBody = useCode.slice(endSummaryIdx + 10, endDetailIdx)
+          .trim()
+          .replaceAll('<br>', '')
+          .replaceAll('<br/>', '')
+          .replaceAll('<br />', '')
+
+        let remainder = useCode.slice(endDetailIdx + 11)
+        // additional <br> in some readme packages between details
+        if (remainder.startsWith('<br>'))
+          remainder = remainder.slice(4)
+        if (remainder.startsWith('<br/>'))
+          remainder = remainder.slice(5)
+        if (remainder.startsWith('<br />'))
+          remainder = remainder.slice(6)
+
+        useCode = `${useCode.slice(0, detailIdx)}\n::: details ${title}\n\n${detailBody}\n:::\n${remainder}`
+        idx = 0
+      }
+
+      return useCode
     },
   }
 }
