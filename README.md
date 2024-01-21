@@ -31,3 +31,7 @@ GITHUB_TOKEN=<YOUR_TOKEN>
 ```bash
 pnpm gen-files
 ```
+
+## Contributing
+
+Please refer to https://github.com/antfu/contribute

@@ -72,17 +72,18 @@ export function MarkdownTransform(): PluginOption {
           .replaceAll('<br/>', '')
           .replaceAll('<br />', '')
 
-        let remainder = useCode.slice(endDetailIdx + 11)
+        let rest = useCode.slice(endDetailIdx + 11).trim()
         // additional <br> in some readme packages between details
-        if (remainder.startsWith('<br>'))
-          remainder = remainder.slice(4)
-        if (remainder.startsWith('<br/>'))
-          remainder = remainder.slice(5)
-        if (remainder.startsWith('<br />'))
-          remainder = remainder.slice(6)
+        if (rest.startsWith('<br>'))
+          rest = rest.slice(4)
+        if (rest.startsWith('<br/>'))
+          rest = rest.slice(5)
+        if (rest.startsWith('<br />'))
+          rest = rest.slice(6)
 
-        useCode = `${useCode.slice(0, detailIdx)}\n::: details ${title}\n\n${detailBody}\n:::\n${remainder}`
-        idx = 0
+        useCode = `${useCode.slice(0, detailIdx)}\n::: details ${title}\n\n${detailBody}\n:::\n`
+        idx = useCode.length
+        useCode += rest
       }
 
       return useCode

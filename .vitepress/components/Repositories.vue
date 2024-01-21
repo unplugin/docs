@@ -6,7 +6,7 @@ import { data as repositoryData } from '../data/repository.data'
   <div flex="~ wrap" gap-3 items-center>
     <a
       v-for="(item, index) in repositoryData" :key="index"
-      w-84 h-42 px-4 py-3 cursor-pointer
+      w-20rem h-42 px-4 py-3 cursor-pointer
       border="1 solid $vp-c-divider" rounded-md
       important-transition-all duration-400
       hover="shadow-md bg-$vp-c-bg-soft"
