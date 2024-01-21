@@ -2,6 +2,7 @@
   "name": "unplugin-docs",
   "type": "module",
   "private": true,
+  "packageManager": "pnpm@8.14.1",
   "scripts": {
     "gen-files": "tsx ./.vitepress/data/gen-files.ts",
     "dev": "vitepress dev --open",
