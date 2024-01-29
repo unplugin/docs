@@ -74,7 +74,7 @@ export default defineConfig({
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, viewport-fit=cover' }],
   ],
   markdown: {
-    config: (md) => {
+    config: (md: any) => {
       md.use(MarkdownItGitHubAlerts)
     },
     codeTransformers: [
@@ -82,5 +82,5 @@ export default defineConfig({
     ],
   },
   ignoreDeadLinks: true,
-  vite,
+  vite: vite as any,
 })

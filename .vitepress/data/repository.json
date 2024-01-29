@@ -2,7 +2,7 @@
   {
     "name": "unplugin-vue-components",
     "stargazers": {
-      "totalCount": 3361
+      "totalCount": 3379
     },
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/143585159?v=4",
@@ -18,7 +18,7 @@
   {
     "name": "unplugin-icons",
     "stargazers": {
-      "totalCount": 3294
+      "totalCount": 3310
     },
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/143585159?v=4",
@@ -29,12 +29,12 @@
       "name": "TypeScript",
       "color": "#3178c6"
     },
-    "forkCount": 121
+    "forkCount": 123
   },
   {
     "name": "unplugin-auto-import",
     "stargazers": {
-      "totalCount": 2750
+      "totalCount": 2763
     },
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/143585159?v=4",
@@ -45,7 +45,7 @@
       "name": "TypeScript",
       "color": "#3178c6"
     },
-    "forkCount": 178
+    "forkCount": 182
   },
   {
     "name": "unplugin-vue2-script-setup",
@@ -66,7 +66,7 @@
   {
     "name": "unplugin-vue-markdown",
     "stargazers": {
-      "totalCount": 428
+      "totalCount": 429
     },
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/143585159?v=4",
@@ -82,7 +82,7 @@
   {
     "name": "unplugin-swc",
     "stargazers": {
-      "totalCount": 212
+      "totalCount": 213
     },
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/143585159?v=4",
@@ -98,7 +98,7 @@
   {
     "name": "unplugin-turbo-console",
     "stargazers": {
-      "totalCount": 215
+      "totalCount": 222
     },
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/143585159?v=4",
@@ -114,7 +114,7 @@
   {
     "name": "unplugin-imagemin",
     "stargazers": {
-      "totalCount": 137
+      "totalCount": 140
     },
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/143585159?v=4",
@@ -125,7 +125,7 @@
       "name": "TypeScript",
       "color": "#3178c6"
     },
-    "forkCount": 12
+    "forkCount": 13
   },
   {
     "name": "unplugin-vue-cssvars",
@@ -162,7 +162,7 @@
   {
     "name": "unplugin-macros",
     "stargazers": {
-      "totalCount": 85
+      "totalCount": 89
     },
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/143585159?v=4",
@@ -178,7 +178,7 @@
   {
     "name": "unplugin-vue-ce",
     "stargazers": {
-      "totalCount": 61
+      "totalCount": 62
     },
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/143585159?v=4",
