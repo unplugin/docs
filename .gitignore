@@ -7,3 +7,4 @@ node_modules
 showcase/*.md
 !showcase/index.md
 .idea/
+repository.json
