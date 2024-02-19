@@ -2,7 +2,7 @@
   {
     "name": "unplugin-vue-components",
     "stargazers": {
-      "totalCount": 3379
+      "totalCount": 3398
     },
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/143585159?v=4",
@@ -13,12 +13,12 @@
       "name": "TypeScript",
       "color": "#3178c6"
     },
-    "forkCount": 325
+    "forkCount": 328
   },
   {
     "name": "unplugin-icons",
     "stargazers": {
-      "totalCount": 3310
+      "totalCount": 3359
     },
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/143585159?v=4",
@@ -29,12 +29,12 @@
       "name": "TypeScript",
       "color": "#3178c6"
     },
-    "forkCount": 123
+    "forkCount": 125
   },
   {
     "name": "unplugin-auto-import",
     "stargazers": {
-      "totalCount": 2763
+      "totalCount": 2801
     },
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/143585159?v=4",
@@ -45,12 +45,12 @@
       "name": "TypeScript",
       "color": "#3178c6"
     },
-    "forkCount": 182
+    "forkCount": 180
   },
   {
     "name": "unplugin-vue2-script-setup",
     "stargazers": {
-      "totalCount": 585
+      "totalCount": 589
     },
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/143585159?v=4",
@@ -66,7 +66,7 @@
   {
     "name": "unplugin-vue-markdown",
     "stargazers": {
-      "totalCount": 429
+      "totalCount": 438
     },
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/143585159?v=4",
@@ -77,7 +77,7 @@
       "name": "TypeScript",
       "color": "#3178c6"
     },
-    "forkCount": 22
+    "forkCount": 24
   },
   {
     "name": "unplugin-swc",
@@ -93,12 +93,12 @@
       "name": "TypeScript",
       "color": "#3178c6"
     },
-    "forkCount": 12
+    "forkCount": 13
   },
   {
     "name": "unplugin-turbo-console",
     "stargazers": {
-      "totalCount": 222
+      "totalCount": 240
     },
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/143585159?v=4",
@@ -109,12 +109,12 @@
       "name": "TypeScript",
       "color": "#3178c6"
     },
-    "forkCount": 5
+    "forkCount": 6
   },
   {
     "name": "unplugin-imagemin",
     "stargazers": {
-      "totalCount": 140
+      "totalCount": 146
     },
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/143585159?v=4",
@@ -125,7 +125,7 @@
       "name": "TypeScript",
       "color": "#3178c6"
     },
-    "forkCount": 13
+    "forkCount": 14
   },
   {
     "name": "unplugin-vue-cssvars",
@@ -146,7 +146,7 @@
   {
     "name": "unplugin-vue",
     "stargazers": {
-      "totalCount": 127
+      "totalCount": 131
     },
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/143585159?v=4",
@@ -162,7 +162,7 @@
   {
     "name": "unplugin-macros",
     "stargazers": {
-      "totalCount": 89
+      "totalCount": 92
     },
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/143585159?v=4",
@@ -178,7 +178,7 @@
   {
     "name": "unplugin-vue-ce",
     "stargazers": {
-      "totalCount": 62
+      "totalCount": 63
     },
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/143585159?v=4",
