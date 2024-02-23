@@ -5,12 +5,13 @@ env:
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
+  watch:
+    types: [started]
 
 jobs:
   Deploy-Production:
     runs-on: ubuntu-latest
+    if: secrets.VERCEL_TOKEN != ''
     steps:
       - uses: actions/checkout@v4
       - run: corepack enable
