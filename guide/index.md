@@ -219,13 +219,13 @@ export const esbuildPlugin = unplugin.esbuild
 Since `v0.10.0`, **Unplugin** supports constructing multiple nested plugins to behave like a single one.
 
 ### Bundler Supported
-|         Rollup         | Vite | webpack 4 | webpack 5 | Rspack |    esbuild     |
-| :--------------------: | :--: | :-------: | :-------: | :----: | :------------: |
-| ✅ `>=3.1`<sup>1</sup> |  ✅  |    ✅     |    ✅     |   ✅   | <span style="color: #ca8a04">⚠️</span><sup>2</sup> |
+
+|         Rollup         | Vite | webpack 4 | webpack 5 | Rspack |   esbuild    |
+| :--------------------: | :--: | :-------: | :-------: | :----: | :----------: |
+| ✅ `>=3.1`<sup>1</sup> |  ✅  |    ✅     |    ✅     |   ✅   | ✅ (v1.8.0+) |
 
 ::: details Notice
 1. Rollup supports nested plugins since [v3.1.0](https://github.com/rollup/rollup/releases/tag/v3.1.0). Plugin author should ask users to have a Rollup version of `>=3.1.0` when using nested plugins. For single plugin format, **Unplugin** works for any version of Rollup.
-2. Since esbuild does not have a built-in transform phase, the `transform` hook of the nested plugin will not work on esbuild yet. Other hooks like `load` or `resolveId` work fine. We will try to find a way to support it in the future.
 :::
 
 ### Usage
