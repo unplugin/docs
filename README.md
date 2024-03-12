@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> Docs has been move to [unjs/unplugin](https://github.com/unjs/unplugin). This repository is now archived.
+
 <p align="center">
 <img src="https://raw.githubusercontent.com/unplugin/docs/main/public/logo.svg">
 </p>
